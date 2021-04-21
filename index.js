@@ -75,17 +75,17 @@ client.on(`ready`, () => {
 //DO NOT TOUCH
 //FOLDERS:
 //Admin custommsg data FUN General Music NSFW others
-commandFiles = readdirSync(join(__dirname, `Music`)).filter(file =>
+client = readdirSync(join(__dirname, `Music`)).filter(file =>
   file.endsWith(`.js`)
 );
-for (const file of commandFiles) {
+for (const file of client) {
   const command = require(join(__dirname, `Music`, `${file}`));
   client.commands.set(command.name, command);
 }
-commandFiles = readdirSync(join(__dirname, `others`)).filter(file =>
+client = readdirSync(join(__dirname, `others`)).filter(file =>
   file.endsWith(`.js`)
 );
-for (const file of commandFiles) {
+for (const file of client) {
   const command = require(join(__dirname, `others`, `${file}`));
   client.commands.set(command.name, command);
 }
@@ -186,5 +186,3 @@ function delay(delayInms) {
     }, delayInms);
   });
 }
-
-//Bot coded by Tomato#6966
