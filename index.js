@@ -14,7 +14,7 @@ const client = new Client({
   disableMentions: ``,
   partials: ["MESSAGE", "CHANNEL", "REACTION"]
 });
-client.login("");
+client.login("ODc2ODgxNzQxNjc4MjY4NDE3.YRqhwg.TdLFzqz2xdczFqIoD8jhXnWcvgE");
 client.commands = new Collection();
 client.setMaxListeners(0);
 client.prefix = PREFIX;
